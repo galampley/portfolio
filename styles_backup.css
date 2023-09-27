@@ -1,0 +1,317 @@
+/* Global Styles */
+body {
+    background-color: #333;
+    color: #cfc;
+    font-family: 'Droid Serif', serif;
+}
+
+/* Headlines */
+#header h1,
+#about-me h2,
+#experience h2,
+#ai-projects h2,
+#contact h2 {
+    font-size: 3em;
+    color: #98ff98;
+}
+
+/* Header Navigation Links */
+#header nav a {
+    color: #cfc;
+}
+
+/* Titles */
+#experience .date,
+#experience .title,
+#ai-projects .project-details h3,
+#contact-form label {
+    font-size: 1.25em;
+    color: #98ff98;
+    font-weight: bold;
+}
+
+/* Text Styling */
+p,
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+    font-size: 1em;
+    color: #cfc;
+}
+
+/* Reduce space between headline and text */
+#contact h2 {
+    margin-bottom: 10px;
+    margin-top: 150px; /* Adjust the value to your preference */
+}
+
+/* GitHub Links for AI Projects */
+.project-details h3 a {
+    color: #98ff98;
+    text-decoration: none;
+}
+
+/* Global Layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Styles for tablets and mobile devices */
+
+    /* Adjust Headlines */
+    #header h1,
+    #about-me h2,
+    #experience h2,
+    #ai-projects h2,
+    #contact h2 {
+        font-size: 2.5em;
+    }
+
+    /* Adjust Titles and Text */
+    p,
+    #experience .date,
+    #experience .title,
+    #ai-projects .project-details h3,
+    #contact-form label {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Styles for mobile devices */
+
+    /* Adjust Headlines */
+    #header h1,
+    #about-me h2,
+    #experience h2,
+    #ai-projects h2,
+    #contact h2 {
+        font-size: 2em;
+    }
+
+    /* Adjust Titles and Text */
+    p,
+    #experience .date,
+    #experience .title,
+    #ai-projects .project-details h3,
+    #contact-form label {
+        font-size: 0.7em;
+    }
+}
+
+/* Spacing between Page Links */
+.nav-link {
+    margin-right: 20px;
+}
+
+/* About Me and Experience Side-by-Side */
+.about-experience {
+    display: flex;
+    justify-content: flex-start;
+    gap: 80px;  /* Adds some gap between the two sections */
+}
+
+/* Experience Section Styles */
+#experience {
+    flex-grow: 1;
+}
+/* Fixed Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;  /* Same as the body background color */
+    z-index: 100;  /* Ensure the header is above all other elements */
+}
+
+/* Add margins to either side of the page */
+.content-wrapper, header {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Add top padding to content-wrapper */
+.content-wrapper {
+    padding-top: 150px;  /* Adjust based on your header's height */
+}
+
+/* Move Experience Section closer to the midway point */
+#experience {
+    padding-left: 0%;  /* Adjust this value as needed */
+}
+
+/* Custom scroll-margin-top for About Me section */
+#about-me {
+    scroll-margin-top: 150px;
+}
+
+/* Custom scroll-margin-top for AI Projects section */
+#ai-projects {
+    scroll-margin-top: 185px;  /* You might need to adjust this value */
+}
+
+/* Style the form labels and input fields */
+#contact-form label,
+#contact-form input,
+#contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Make the Details textarea 3x as tall */
+#details {
+    height: 8em;
+}
+
+/* Style the form input fields and textarea for consistency */
+#contact-form input, 
+#contact-form textarea {
+    font-family: 'Droid Serif', serif;
+    font-size: 1em;
+    color:#000;
+}
+
+#contact-form button {
+    background-color: #98ff98;  /* Same color as headlines */
+    color: #333;  /* Text color, choose according to your design */
+    border: none;  /* Remove default border */
+    padding: 10px 20px;  /* Add some padding for better appearance */
+    cursor: pointer;  /* Change cursor to pointer on hover */
+}
+
+/* Style for project title container */
+.project-title {
+    display: flex;
+    align-items: center;
+    font-size:1.25em;
+}
+
+/* Style for GitHub logo */
+.github-logo {
+    width: 20px;
+    height: auto;
+    margin-left: 10px;  /* Adds some space between the title and the logo */
+}
+
+/* Style for new project-content wrapper */
+.project-content {
+    display: flex;
+}
+
+/* Reduce space between project titles and descriptions */
+.project-title {
+    margin-bottom: 0px; /* Adjust this value to your preference */
+}
+
+.project-details p {
+    margin-top: 0px; /* Adjust this value to your preference */
+}
+
+/* Style for project image */
+.project-image {
+    width: 100px;  /* Set to desired width */
+    height: 100px;  /* Maintain aspect ratio */
+    margin-right: 80px;  /* Add some space between image and details */
+}
+
+#about-me, #experience {
+    flex: 1;  /* Each takes up equal amount of space */
+    margin-bottom:50px;
+}
+
+/* Restore Margins for AI Projects and Contact Sections */
+#ai-projects,
+#contact {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; /* or whatever max-width you want */
+    padding: 0 20px;  /* Adds 20px padding to left and right */
+}
+
+/* Control the width of the About Me and Experience sections */
+#about-me {
+    flex-basis: 100%;  /* take up 60% of the available width */
+}
+
+#experience {
+    flex-basis: 100%;  /* take up 40% of the available width */
+}
+
+/* styles.css */
+
+.experience-item {
+    display: flex;
+    flex-direction:column;
+    margin-bottom: 20px;
+}
+
+.line1,
+.line2,
+.line3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.line1 .employer-date,
+.line2 .job-date {
+    width: 150px;
+}
+
+.job-desc {
+    margin-left: 150px; /* Add spacing between job-name and job-desc */
+}
+
+.line1 {
+    color: #98ff98;
+    font-size: 1.25em;
+    font-weight:bold;
+}
+
+.line2 {
+    color:#cfc;
+    font-weight:bold;
+}
+
+/* Style clickable project titles */
+.project-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #cfc; /* Change to your desired color */
+    text-decoration: underline;
+    font-size: 1em;
+}
+
+.hidden-video {
+    display: none;
+}
+
+/* Add a CSS class to the video element */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* You can adjust the background color and opacity */
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the about me image */
+.about-me-image {
+    width: 400px; /* Set your preferred width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline styling that might affect the image size */
+    margin: 50px auto; /* Adjust margin as needed */
+    float: left;
+}
