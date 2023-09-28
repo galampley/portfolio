@@ -47,7 +47,7 @@ p, #contact-form input, #contact-form textarea, #contact-form button {
 
 @media screen and (max-width: 768px) {
     #header h1, #about-me h2, #experience h2, #ai-projects h2, #contact h2 {
-        font-size: 2.5em;
+        font-size: 4vw;
     }
     p, #experience .date, #experience .title, #ai-projects .project-details h3, #contact-form label {
         font-size: 0.8em;
@@ -56,7 +56,7 @@ p, #contact-form input, #contact-form textarea, #contact-form button {
 
 @media screen and (max-width: 480px) {
     #header h1, #about-me h2, #experience h2, #ai-projects h2, #contact h2 {
-        font-size: 2em;
+        font-size: 4vw;
     }
     p, #experience .date, #experience .title, #ai-projects .project-details h3, #contact-form label {
         font-size: 0.7em;
@@ -145,6 +145,12 @@ header {
     margin-left: 10px;
 }
 
+.streamlit-logo {
+    width: 40px;
+    height: auto;
+    margin-left: 10px;
+}
+
 .project-content {
     display: flex;
 }
@@ -215,6 +221,11 @@ header {
     font-weight: bold;
 }
 
+/* Style the links within .line2 */
+.line2 a {
+    color: inherit; /* Inherit the color from the parent element (text color) */
+}
+
 .project-toggle {
     background: none;
     border: none;
@@ -222,6 +233,7 @@ header {
     color: #cfc;
     text-decoration: underline;
     font-size: 1em;
+    font-family: serif;
 }
 
 .hidden-video {
@@ -241,7 +253,7 @@ header {
 }
 
 .about-me-image {
-    width: 400px;
+    width: 75%;
     height: auto;
     display: block;
     margin: 50px auto;
@@ -254,4 +266,25 @@ header {
     color: inherit;
     font-weight: bold;  /* Inherits the color of parent element */
 }
+
+#contact {
+    margin-bottom: 50px; /* Adjust the value as needed */
+}
+
+@media only screen and (max-width: 800px) {
+    body * {
+        display: none !important;
+    }
+
+    body::before {
+        content: "This website is only viewable on desktop.";
+        display: block !important;
+        font-size: 2em;
+        text-align: center;
+        margin: 20px;
+    }
+}
+
+
+
 
