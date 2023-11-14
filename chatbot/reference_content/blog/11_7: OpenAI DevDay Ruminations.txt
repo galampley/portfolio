@@ -1,0 +1,28 @@
+11/7: OpenAI DevDay Ruminations
+
+
+
+OpenAI DevDay sparked lots of public and personal interest. The cultural conversation is that we are a significant step closer to AI’s day-to-day integration because of its growing applicability for the public and ease of usability for builders. I agree with some of this.
+
+Assistants API: Wanderlust example to manage trip planning; in 1 platform, with natural language. Components of Assistants are (1) threading & logs, (2) retrieval, (3) code interpreter and (4) function calling. IMO these components are seemingly all you need to create an agent for informational and executional tasks. Threading for step-wise visibility, retrieval for pure info seeking and context provision for function execution like booking a flight, code interpreter as the logic brain for the LLM and function calling to integrate with informational or executional APIs etc. This is truly game changing, especially in comparison to GPTs, because it makes builders’ lives much easier if they want to integrate LLM tech into their new or existing product.
+
+GPTs: Canva and Zapier examples. Components of GPTs are (1) instructions, (2) extended knowledge and (3) actions. This release is receiving the most hype from the public and likely so because insiders are joking that "OpenAI killed my startup" with the release of GPTs and the concept of an App Store is a concept gen pop can run with, especially re: revenue sharing. But let’s peel back the layers of the onion. The "killed my startup" joke comes from a place of satire as insiders recognize that GPTs are just an extension of custom intructions + code interpreter, that have no inherent mote. The one difference worth noting is the inclusion of Actions in GPTs. Actions mock function calling but are dumbed down for the non-technical user to create. However, the aspects of LLMs that are actually adding value are prompt chaining and hyper-specific function calling, both of which likely won’t be possible with this gen pop version of the tool. I predict an initial onslought of consumers creating GPTs, motivated by first mover rewards in revenue sharing and overzealous ideas of the extent GPTs can go, then a precipitous drop 3 months after OpenAI’s rev sharing model is announced. Ultimately, we do business on proprietary platforms that have their own competitive advantage/mote and GPTs aren’t going to circumvent that.
+
+Pricing: Prices for models keep dropping as they become more of a commodity, given the limited differentiation between models and increasing number of competitors. Chip manufacturers are making more GPUs/TPUs, new entrants are coming on the scene supplying more as well. There will only be 1 foundation model winner once the dust settles and the battle is about scale of users now. And OpenAI is primed to win due to its marginally better model performance but more importantly due to its focus on end users. GPTs might not be here to stay but they will make an incremental change in consumers’ minds about how we interface with technology that have LLMs deeply integrated in the UX.
+
+Multi-modal: Whisper for speech recognition, vision, image creation (DALL·E 3), and text-to-speech (TTS). These will all be available via the API.
+
+GPT-4 Turbo: JSON Mode, parallel function calling, 128K context length. Another round of OpenAI making builder experience more robust.
+
+Impact on orchestration layers like Langchain: I am curious to see where the relevance of orchestration layers will net out while OpenAI is natively solving for usability. "The goal of LangChain is to link powerful LLMs, such as OpenAI’s GPT-3.5 and GPT-4, to an array of external data sources to create and reap the benefits of natural language processing (NLP) applications." There might be some room to play for the intermediate user, in the short term, who isn’t as well-versed software development.
+
+In summary, it is still "time to build", not necessarily look for an easy way out.
+
+New models and developer products announced at DevDay
+GPT-4 Turbo with 128K context and lower prices, the new Assistants API, GPT-4 Turbo with Vision, DALL·E 3 API, and…openai.com
+
+Introducing GPTs
+You can now create custom versions of ChatGPT that combine instructions, extra knowledge, and any combination of…openai.com
+
+OpenAI Platform
+Explore developer resources, tutorials, API docs, and dynamic examples to get the most out of OpenAI's platform.platform.openai.com

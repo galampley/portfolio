@@ -1,0 +1,37 @@
+11/8: OpenAI Assistants Debrief
+
+
+
+Intro’d at OAI’s DevDay, Assistants (with GPT-4 Turbo) are meant to make (1) the process of developing AI applications simpler and (2) the output more functional for the end user.
+
+Benefits over previous methods of leveraging AI models (in order of significance)
+
+Integration of Multiple Tools: Assistants combine various tools such as the Code Interpreter, Knowledge Retrieval, and Function calling, providing a comprehensive platform to address complex queries which may need a blend of these capabilities. Devs can now build more complex apps with a single API call, reducing the need for multiple integrations and handling different types of user requests more effectively.
+
+Enhanced Customizability with Function Definitions: By defining custom functions, developers can tailor the Assistant’s capabilities to specific domains or tasks, offering a level of specialization that is particularly useful for businesses.
+
+Asynchronous Processing and Function Calling: The asynchronous feature and the ability to invoke specific functions provide a structured approach to handling complex queries that require external data processing or conditional logic flows. For devs…equipped to design non-linear, event-driven user flows that can handle long-running tasks or external API calls without stalling user interaction.
+
+Efficient Management of Conversation Context: The use of threads to manage conversations allows for efficient context handling, ensuring the model has relevant information from the conversation history to generate appropriate responses. For devs, this leads to less overhead in designing conversations that span multiple interactions. End users will enjoy more coherent and context-aware conversations, as Assistants can better recall past interactions and provide consistent follow-through.
+
+Scalable and Robust File Handling: Assistants can process and generate files, allowing for robust data handling within user interactions. They support various file formats, enhancing the model’s utility in real-world applications.
+
+Customizable Interaction Flow: Devs can define custom instructions for their Assistant, influencing how the model behaves in response to user queries. This level of customization was not as accessible or flexible in prior models but instead had to be continuously fed in the prompt.
+
+Cost and Efficiency Optimization: The API optimizes for cost by managing the tradeoff between retrieval quality and model usage, potentially saving on the number of tokens used and, consequently, on expenses.
+
+Words to the wise
+
+I poked around in the Assistants Playground and noticed that GPT-3-Turbo-1106 has trouble reconciling tool and general usage. For example, I enabled a get_stock_price function, code interpreter and retrieval then queried for the current president of the US. Note that the document I provided for retrieval had nothing to do with the query. GPT-3-Turbo incorrectly ran the function call and retrieval and output that it was unable to give an answer. However, GPT-4-Turbo was able to identify that none of these tools were relevant and defaulted back into generic-mode.
+
+Remember to add a polling mechanism to periodically retrieve the Run object. You can check the status of the run each time you retrieve the object to determine what your application should do next. This will come after the Run.retrieve step and before Message.list.
+
+Relevant details
+
+From OpenAI Assistants documentation
+
+From OpenAI Assistants documentation
+
+Sources
+
+https://platform.openai.com/docs/assistants/overview
