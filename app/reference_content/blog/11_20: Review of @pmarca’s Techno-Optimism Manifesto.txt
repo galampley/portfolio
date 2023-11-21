@@ -1,0 +1,67 @@
+11/20: Review of @pmarca’s Techno-Optimism Manifesto
+
+
+
+Marc Andreesen (@pmarca), godfather of the internet and successful VC, dropped a manifesto in mid-October that promotes technology, and more specifically AI, accelerationism. He thought it a worthwhile exercise because of the growing opposition that is Techno-Doomerism, often under the guise of Effective Altruism. Effective Altruism is a movement that prioritizes policy and alignment over progress.
+
+This conversation is especially relevant as of the past weekend, with Sam Altman getting ousted from OpenAI. The board reported that Altman was fired for, and I paraphrase, ‘not disclosing pertinent info’. Many have interpreted this as ‘moving too fast, too soon’ without proper guardrails and protections, a relevant case of speed up vs. slow down. Note that we are still awaiting clarification on if this was the real explanation to his departure.
+
+Intuitively, I side with Techno-Optimisim but wanted to take a minute to digest Andreesen’s manifesto. There are 14 sections to the manifesto (linked at the end), I will summarize each and add My POV.
+
+Lies: Popular discourse is that tech is ultimately bad for society. It takes our jobs, reduces wages and increases inequality.
+
+My POV: DISAGREE. There are some people who hold this opinion but I wouldn’t agree that its rampant. I think its healthy for some to hold this opinion because otherwise there are no checks and balances. Everything has a potential downside that needs to be evaluated and potentially mitigated.
+
+Truth: Our civilization, that we love so much, is built on technology so we should keep doing more of the same.
+
+My POV: AGREE. Civilization, across all metrics, is better off now than it ever was in the past. It might not seem that way because inequality, disease etc still exists and media coverage is at an all time high to make us hyper-aware of these issues; however, the data doesn’t lie.
+
+Technology: Lack of growth is a kill-all. There are only 3 sources of growth: population, natural resources and technology. The prior 2 are not growing any time soon so technology is our only lever.
+
+My POV: AGREE. There is no such thing as stagnation in a system like civilization. We are either moving forward or backward. What’s interesting is that the 3 sources of growth don’t each live in a vacuum. Our historically growing population used natural resources at a higher rate, then created technology for efficiency sake, which ultimately used more natural resources, which led to our global climate crisis. However, we can’t reverse the consequences of our past decisions so our only path is forward is creating the ‘right’ technology at the ‘right’ time. For example, prioritizing electric cars instead of driverless cars.
+
+Markets: Free markets > centralized markets. For the individual and the collective. Markets are generative and infinite.
+
+My POV: AGREE WITH NUANCE. For the most part, free markets set prices equitably, grow wages, create jobs and economic mobility which altogether create more wealth and abundance. However, free markets can still propogate inequality. An individual demander or supplier’s preference to participate in a market is determined by (1) information, (2) resources and (3) bias. Technology, by nature, democratizes information and resources such that individuals are properly equipped to best participate in the market. However, if we look at history, technology has further stratified bias. Bias is often smoothed by the market, individuals have bias with high variance but collectives don’t. However, as individual bias grows with more technology, the collective becomes less effective at mitigating downstream impact. The hope is that the growth rate of collective bias expression is slower than the growth rate of positive outcomes, in perpetuity.
+
+The Techno-Capital Machine: Combining tech and markets creates the techno-capital machine that infinitely spirals upwards, whose product is unlimited abundance. Cornerstones of this machine are intelligence and energy.
+
+My POV: AGREE. If we assume this is true, "growth rate of collective bias expression is slower than the growth rate of positive outcomes, in perpetuity", then we don’t need to add ‘bias’ into the list of cornerstones.
+
+Intelligence: Smart people and smart societies prosper. Artificial Intelligence makes us smarter which makes us prosper more. Augmented Intelligence is a subdivision of Artificial Intelligence that drives marginal productivity, which drives wages up, which drives demand, which creates new supply = infinite growth.
+
+My POV: MODIFICATION. Andreesen talks about ‘intelligence’ as innate but the reality is that intelligence is a product of nature and nurture. Accessibility of resources, like university or professional training, are, in part, responsible for realized intelligence. So if the techno-capital machine is to ‘spiral upward’ equitably, resource democratization is a must, which is not the reality in the US.
+
+Energy: Energy is the enabler for intelligence. We can get clean energy from nuclear fusion and fission. If we are limited by our energy then we are moving backward.
+
+My POV: OBSTAIN. I don’t know enough about nuclear energy, but the premise that energy is a cornerstone to growth is true.
+
+Abundance: Intelligence and energy should exist in a positive feedback loop to create abundance, with the measure of success being prices falling towards $0. The system’s ultimate payoff is more people, from which come more new ideas and more progress.
+
+My POV: DISAGREE. In practice, the flywheel for more progress is not more people but instead freeing up a higher proportion of a slowing population to focus on innovation/creativity. If we look at history, more mature societies always undergo a slowing birthrate as folks opt for individualism as opposed to making babies that will help on the farm. This is the achilles heel for Andreesen’s idea of ‘upward spiral’. I believe upward spiral is possible but at a slower clip.
+
+Not Utopia, But Close Enough: Change only happens in the margins. We will never be perfect but are more quickly approaching perfection.
+
+My POV: AGREE.
+
+Becoming Technological Supermen: We have explored all of Earth’s land, leaving technology on that land as the final frontier for exploration.
+
+My POV: OBSTAIN.
+
+Technological Values: Technology enables self-actualization.
+
+My POV: AGREE.
+
+The Meaning of Life: Technology is liberatory and frees more time for humans to do things outside markets.
+
+My POV: AGREE.
+
+The Enemy: Stagnation, anti-ambition, authoritarianism, collectivism, bureaucracy, corruption.
+
+My POV: AGREE.
+
+Overall: Andreesen can be a bit dramatic and some of his views are over-idealized but for the most part I stand by my intuition that Techno-Optimism is the way forward.
+
+Sources
+
+https://a16z.com/the-techno-optimist-manifesto/

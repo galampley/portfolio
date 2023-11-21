@@ -71,6 +71,7 @@ p, #contact-form input, #contact-form textarea, #contact-form button {
     display: flex;
     justify-content: flex-start;
     gap: 80px;
+    margin-top: 20px;
 }
 
 #experience {
@@ -271,20 +272,93 @@ header {
     margin-bottom: 50px; /* Adjust the value as needed */
 }
 
-@media only screen and (max-width: 800px) {
-    body * {
-        display: none !important;
-    }
-
-    body::before {
-        content: "This website is only viewable on desktop.";
-        display: block !important;
-        font-size: 2em;
-        text-align: center;
-        margin: 20px;
-    }
+/* Chatbot Section */
+#chatbot-container {
+    position: fixed;
+    bottom: 150px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid rgba(255, 200, 152, 0.362);
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex; /* Add flex display for centering */
+    flex-direction: column; /* Stack elements vertically */
 }
 
+#chat-window {
+    width: 300px;
+    height: 400px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#message-input {
+    width: calc(100% - 60px);
+    padding: 5px;
+}
+
+#send-button {
+    width: 50px;
+    padding: 5px;
+}
+
+#chatbot-icon {
+    position: fixed;
+    width:100px;
+    height:100px;
+    overflow: visible;
+    bottom: 20px;
+    right: 5px;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 1001; /* Higher than the container to be clickable */
+    transition: opacity 0.5s; /* Add opacity transition for smooth disappearance */
+}
+.chat_icon_image {
+    max-width: 100%;  /* Ensures the image does not exceed the width of its container */
+    height: auto;     /* Keeps the image's aspect ratio intact */
+}
+
+
+#chatbot-container.collapsed {
+    display: none;
+}
+
+#chatbot-container.expanded #chatbot-icon {
+    opacity: 0; /* Make the icon invisible when the chat window is expanded */
+}
+
+/* Add spacing between user and bot messages */
+.user-message,
+.bot-message {
+    color: black; /* Set the text color to black */
+    margin-bottom: 10px; /* Adjust the margin to your preference */
+}
+
+.bot-message:before {
+    content: "Bot: "; /* Add "Bot: " before bot messages */
+    font-weight: bold; /* Make the "Bot" text bold */
+}
+
+.user-message:before {
+    content: "You: "; /* Add "You: " before user messages */
+    font-weight: bold; /* Make the "You" text bold */
+}
+
+#loading-spinner {
+    display: none; /* Initially hide the spinner */
+    text-align: center;
+    max-width: 100%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the spinner horizontally */
+  }
+  
+  #loading-spinner iframe {
+    max-width: 100%; /* Adjust the width as needed */
+  }
+  
 
 
 

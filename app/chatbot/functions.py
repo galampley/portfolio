@@ -71,7 +71,7 @@ def download_resume():
     download_url = f'https://drive.google.com/uc?export=download&id={file_id}'
 
     # The local file path where you want to download the PDF
-    local_file_path = 'reference_content/resume.pdf'
+    local_file_path = 'app/reference_content/resume.pdf'
 
     # Perform the request and download the file
     response = requests.get(download_url)
@@ -83,10 +83,10 @@ def download_resume():
 
 def download_about_me():
     # Path to your local HTML file
-    html_file_path = '../index.html'
+    html_file_path = 'app/templates/index.html'
 
     # Path to the text file you will write to
-    text_file_path = 'reference_content/about_me.txt'
+    text_file_path = 'app/reference_content/about_me.txt'
 
     # Read the HTML content from the file
     with open(html_file_path, 'r', encoding='utf-8') as file:
@@ -149,7 +149,7 @@ def get_article_content(article_id, rapidapi_key):
                 else:
                     raise Exception(f"Error fetching article content: {response.status_code}")
 
-def download_blog(username, rapidapi_key, directory='reference_content/blog'):
+def download_blog(username, rapidapi_key, directory='app/reference_content/blog'):
     # First, obtain the user ID
     user_id = get_medium_user_id(username, rapidapi_key)
     
