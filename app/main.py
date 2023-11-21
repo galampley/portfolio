@@ -3,7 +3,7 @@ import openai
 import requests
 import matplotlib.pyplot as plt
 import time
-from chatbot.functions import *
+from app.chatbot.functions import *
 from flask import Flask, request, jsonify, render_template # moving to web requests instead of just console inputs
 from dotenv import load_dotenv
 import json
