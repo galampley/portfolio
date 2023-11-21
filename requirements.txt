@@ -1,6 +1,5 @@
 annotated-types    
 anyio              
-asyncio           
 beautifulsoup4     
 blinker            
 certifi            
