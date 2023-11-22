@@ -16,9 +16,9 @@ load_dotenv(dotenv_path)
 env_variable = os.getenv('OPENAI_API_KEY')
 env_variable_blog = os.getenv('BLOG_API_KEY')
 
-download_resume()
-download_about_me()
-download_blog("greysonlampley", env_variable_blog)
+# download_resume()
+# download_about_me()
+# download_blog("greysonlampley", env_variable_blog)
 
 assistant=None
 thread=None
