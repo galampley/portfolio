@@ -359,6 +359,65 @@ header {
     max-width: 100%; /* Adjust the width as needed */
   }
   
+  @media screen and (max-width: 480px) {
+    .nav-link, .about-experience, .project-content {
+        flex-direction: column;
+    }
+    .about-me-image {
+        width: 100%; /* Adjust images to take full width on smaller screens */
+        margin-right: 0;
+    }
+    .content-wrapper {
+        padding: 10px; /* Reduce padding for small screens */
+    }
+    /* Further font size adjustments if necessary */
+    .line1, .line2, .line3 {
+        font-size: 0.8em;
+    }
+
+    header {
+        position: relative; /* Change fixed positioning that might be hiding the text */
+        height: auto; /* Ensure the header is not clipping content */
+        padding-top: 10px; /* Add padding to show the text */
+    }
+
+    #about-me {
+        font-size: .8em; /* Set your desired font size */
+    }
+    
+    #about-me h2 {
+        font-size: 2em; /* Ensure the header is the same size as the paragraph text */
+    }
+    
+    #about-me p {
+        font-size: 1em; /* Apply the same font size to all paragraphs */
+    }
+
+    #header nav a.nav-link {
+        font-size: 0.7em; /* Smaller font size */
+        margin: 0 5px; /* Smaller margin */
+    }
+
+    #subtext {
+        font-size: 1.5em;
+    }
+    #header h1 {
+        font-size: 1.75em;
+    }
+
+    #experience h2 {
+        font-size: 1.5em;
+    }
+
+    #ai-projects h2 {
+        font-size: 1.5em;
+    }
+
+    #contact h2 {
+        font-size: 1.5em;
+    }
+
+}
 
 
 
