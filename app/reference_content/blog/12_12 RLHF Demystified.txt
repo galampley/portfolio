@@ -1,0 +1,73 @@
+12/12: RLHF Demystified
+
+Intro
+
+Reinforcement Learning with Human Feedback (RLHF) is a term we’ve heard time and time again because of its novel incorporation into GPTs’ training procedure. However, pundits often gloss over the details because (1) they attribute the significant gains in performance to the transformer architecture itself and (2) the title is seemingly self-explanatory and simple. IMO, it is worth diving into the details because…
+
+Recent models show strong performance using an RLHF substitute, such as Mistral AI’s Mixtral 8x7B
+Without reinforcement learning, LLMs are unruly next word predictors since they were trained on the wild-west that is the internet
+Reinforcement learning is posited as a potential path forward to achieving complex reasoning capabilities in LLMs
+RLHF Purpose: Intended to induce better performance, alignment and safety of model outputs; however, not always the case
+
+#1 — RLHF Reward Model
+
+Definition: Post-training, fine-tuning method that relies on human feedback to create a reward model that facilitates the model learning preferences, values and behaviors that align with human expectations.
+
+Human Feedback Types
+
+Comparative Feedback: Human evaluators compare pairs of outputs or actions and indicate which one they prefer
+Ranking Feedback: Multiple outputs are ranked according to their quality or relevance
+Direct Correction: Human trainers directly correct or edit the outputs or suggest better actions
+Binary Feedback: Simple approval or disapproval (like/dislike) for given outputs
+Narrative Feedback: Detailed comments or explanations about why a certain output is preferable or not
+Comparative and Ranking are the most popular because they capture information more effectively and efficiently than the latter 3 options. Think of Comparative and Ranking feedback like a master chef refining a recipe based on customer tastes. In a taste test, customers sample different versions of a dish (Comparative feedback) and rank them (Ranking feedback). This feedback is more informative than just a thumbs up/down or direct recipe changes. It helps the chef understand subtle preferences, like the balance of flavors, and adjust the recipe accordingly
+
+The Meat and Potatoes
+
+The RLHF Reward Model departs from traditional reinforcement learning that predefines success criterion and allocates discrete rewards accordingly. For example, a simple checkers-playing AI might receive a +1 positive reward for a ‘successful’ move and a -1 negative reward for an ‘unfavorable’ move. The definitions of ‘successful’ and ‘unfavorable’ are known since the rules of checkers are explicit. However, language does not have simple, predefined rules and hence lacks explicit success criterion and thus lacks a reward distribution function.
+
+The RLHF Reward Model solution to not having a clear reward function is to train a reward model using one of the human feedback methods mentioned above. This reward model learns to predict scalar rewards based on human preferences by analyzing examples of good and bad outcomes as judged by humans. The reward allocated to a single LLM output is then used by an RL algorithm, like PPO*, to adjust the model’s parameters and encourage more of the good actions and fewer of the bad ones in future decisions, always ensuring that changes to the policy are not too drastic to maintain stability in learning.
+
+
+GPT-4 Case Study
+
+The ‘GPT-4 Technical Report’ speaks to the fact that RLHF is useful in some cases but is not a magic wand.
+
+Performance (Standardized Exams): NO difference between GPT-4 RLHF vs GPT-4 Base
+Alignment (Fact v Adversarial Fiction Test): RLHF makes a significant positive difference; GPT-3.5 Base < GPT-3.5 RLHF < GPT-4 Base < GPT-4 RLHF
+Safety (Disallowed and Sensitive Content Test): RLHF makes a significant positive difference
+#2 — RLHF Direct Preference Optimization (DPO)
+
+Definition: Post-training, fine-tuning method that directly optimizes the model based on human feedback, thus helping the model learn preferences, values and behaviors that align with human expectations.
+
+DPO and Reward Model are both in the RLHF family as they both incorporate human feedback in fine-tuning but the fine-tuning mechanic itself is different. DPO is direct because the model directly optimizes its parameters to increase the likelihood of generating outputs that resemble those that the human preferred. In contrast, the Reward Model is indirect because the LLM is fine-tuned using a scalar reward distributed by a distinct reward model.
+
+Pros vs. Reward Model
+
+Good when its hard to define a specific reward structure (which is often the case with language)
+Simpler in terms of conceptual process
+Cons vs. Reward Model
+
+Can require more human preference data vs. reward model, due to less generalizability
+Mixtral
+
+RLHF Reward Model has been the golden standard for existing, popular models but Mixtral 8x7B from Mistral AI potentially proves that DPO is sufficient if we massage model architecture. Mixtral was released this week (12/11) and is generating Twitter buzz due to its strong performance (MT-Bench score of 8.30 > GPT-3.5) whilst maintaining open-source. Mistral notes that the model was fine-tuned with DPO for ‘careful instruction following’.
+
+The architecture innovation is a sparse mixture-of-experts network, a decoder-only model where the feedforward block picks from a set of 8 distinct groups of parameters. At every layer, for every token, a router network chooses two of these groups (the “experts”) to process the token and combine their output additively.
+
+This technique increases the number of parameters of a model while controlling cost and latency, as the model only uses a fraction of the total set of parameters per token. Concretely, Mixtral has 46.7B total parameters but only uses 12.9B parameters per token. It, therefore, processes input and generates output at the same speed and for the same cost as a 12.9B model.
+
+Conclusion
+
+Open-source shines by questioning the status-quo. Its one thing to recreate a GPT-capable model in the open, it’s another thing to rethink the model, method of reinforcement learning or system design. Reinforcement learning and ensuring human alignment are paramount when developing GenAI models but the methods to do so should be consistently re-evaluated.
+
+Appendix
+
+RLHF Types
+
+Offline: the model is trained using a pre-collected dataset of human feedback without real-time interaction. This method accounts for bulk of GPT RLHF.
+Online: the model learns from human feedback while actively interacting with its environment, adjusting its behavior based on continuous input from human evaluators. This accounts for some of GPT RLHF, see the thumbs up and thumbs down options in the ChatGPT UI.
+Popular RLHF Algorithms
+
+*Proximal Policy Optimization (PPO): Updates policies in a way that limits the size of policy updates, using a clipping mechanism in the objective function to prevent large, destabilizing changes to the policy. This makes it easier to use and implement compared to TRPO. Known for its efficiency and stability.
+Trust Region Policy Optimization (TRPO): Aims to improve policy while maintaining stability, but it uses a constraint on the policy update to ensure the new policy isn’t too far from the old one. This involves more complex computations to ensure updates stay within a certain ‘trust region’, making it computationally heavier than PPO.

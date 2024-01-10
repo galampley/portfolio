@@ -1,0 +1,71 @@
+11/28: OpenAI's Q* & Thinking Fast and Slow with LLMs
+
+Intro
+
+Andrej Karpathy works in deep learning and computer vision at OpenAI, and is popularly known for his Youtube tutorials and Stanford CS lectures. He recently dropped another informational video titled “Intro to Large Language Models” that has been circulating the Twitter-verse with fervor. One particular section captured my attention: ‘The Future: Thinking Fast and Slow”. Here, he maps LLMs on Daniel Kahneman’s concept of the brain ‘thinking fast and slow’. The framework is that there are 2 systems in the brain; System 1 (i.e. thinking fast) and System 2 (i.e. thinking slow). System 1 processes are fast, automatic and instinctual while System 2 processes are slower, deliberate and require conscious effort. As a byproduct of its methods, System 2 is often more accurate. Karpathy claims that today’s LLMs are exclusively System 1 since they only predict the next best word; however, the LLM frontier is System 2, such that the model can rationalize through problems, in addition to being a ‘good talker’.
+
+This stood out because (1) I studied behavioral economics and read Kahneman in undergrad plus (2) there’s recent speculation that OpenAI’s Mira Murati disclosed to the board the successful internal development of a model with grade school math capabilities, Q*, which led to Altman getting fired as CEO. But why would a model a seemingly simple new model cause such uproar for the board? First off, the OpenAI board, in particular, was inacted to safeguard against development going too far, too fast, such that existential human risk was tiny (never 0). Secondly, Q* sounds a lot like System 2 thinking, in which the model can rationalize through problems, albeit simple problems…for now. But I’m not here to speculate if Q* exists or how capable it is. I instead want to discuss the concept of ‘thinking fast and slow’ with LLMs.
+
+Kahneman Deep Dive
+
+Kahneman’s framework, as a whole, is called the Dual Process Model and we’ve already defined its foundational components above, Systems 1 and 2. But let’s look at examples for a more contextual understanding.
+
+System 1 Example: 2+2=?
+
+When giving the answer to the above, we humans don’t have to implement any mathematical methodology to know the answer is 4. We don’t say that 1+1 = 2 so 1+1+1+1=4. We just know the answer is 4, as a function of long term memory maybe. Today’s LLMs employ a similar instinctual or reflexive mechanism to give us outputs with coherent English syntax and semantics.
+
+System 2 Example: 17x24=?
+
+When giving the answer to the above, we humans have to call on specific mathematical methods for multiplication that we learned in grade school. What’s interesting is that we might not use the exact method we learned in school, but instead use methods that are easiest/quickest for us as individuals. Perhaps, I use the multi-step process of…
+
+17x20 → 17x2 → 10x2 + 2x7 = 34 → 17x20 → 340
+17x4 → 10x4 + 7x4 = 68
+340+68 → 340+60+8 = 408
+…when the taught-in-school method likely involves stacking the numbers on top of each other and carrying remainders blah blah blah. I can’t hold all the remainders and temporary numbers in memory so I instead simplify to more instinctual (System 1) numbers.
+
+Seemingly, the Requirements for System 2 thinking are:
+
+Short-term Memory for calculation’s substeps
+Long-term Memory of all potential methodologies
+Discernment for picking relevant methodologies based on provided context
+Time to complete the calculation’s substeps
+What’s also worth mentioning but not as relevant for the rest of this essay…
+
+Kahneman postulates the roles of Heuristics and Bias in System 2 but predominantly System 1 thinking. As humans, we depend on heuristics and bias for efficiency sake, similar to caching. If LLMs can do the requirements above and don’t have as much of a compute limitation, will we see them employing heuristics or bias? Is this a partial refutation of AGI doomerism?
+Kahneman defines System 2 as the more ‘conscious’ of the two. So if LLMs can employ System 2 thinking, regardless of the complexity, are they conscious (AGI)?
+Back to planned programming.
+
+LLM Chain of Thought Reasoning and Cognitive Reflection Test Evaluation
+
+In 2023, a group of researchers examined the concept of ‘Thinking Fast and Slow in Large Language Models’ and concluded that…
+
+Existing models already exhibit some behavior consistent with System 2
+More model complexity results in more System 2-esque thinking
+Prompting for Chain-of-Thought Reasoning (CoT) gave better results for System 2-eque tasks
+*Chain-of-Thought Reasoning: prompting an LLM to articulate its reasoning process in a step-by-step manner when solving a problem. This approach involves the model generating intermediate steps or explanations that lead to the final answer. By breaking down problems into intermediate steps, the LLMs were better able to avoid intuitive but incorrect responses, enhancing their performance on tasks that required deeper cognitive processing.
+
+They used Cognitive Reflection Tests (CRT) to evaluate the reasoning capabilities of LLMs. CRT is a series of questions designed to assess the ability to override an incorrect “gut response” and engage in reflective, analytical thought to find the correct answer. These questions are typically straightforward but designed in a way that the intuitive answer is often wrong, thus requiring more deliberate, System 2-type processing to solve correctly.
+
+CRT Example: A potato and a camera together cost $1.40. The potato costs $1 more than the camera. How much does the camera cost?
+
+I agree that the study’s results are valid forms of System 2 thinking since they check all of the requirement boxes mentioned in Kahneman Deep Dive; however, they are ‘hand holdy’ and thus lack consistency and transferability. What could help is a reinforcement layer beyond RLHF, since RLHF more aligns the output with natural languge instead of validating the contents of the answer for correctness. Reinforcement feedback is potentially a requirement for System 2 thinking that Kahneman didn’t as explicitly mention in ‘Thinking Fast and Slow’.
+
+LLM Knowledge Graphs
+
+I came across a random LinkedIn blog that unintentionally, but cleverly, built on top of the study mentioned above. The post proposed that Knowledge Graphs and CoT together can lead to better results in System 2 thinking than just CoT alone.
+
+*Knowledge Graphs: form of structured data representation where entities (like objects, people, or concepts) are represented as nodes, and the relationships between these entities are represented as edges. This structure enables complex information to be organized in an interconnected, easily accessible manner, facilitating more efficient data retrieval and analysis.supplemental, not necessary.
+
+The blogger posed the below thought experiment…
+
+Imagine you’re trying to figure out how to set up a lemonade stand and you want to price your lemonade just right. If you asked an LLM without CoT or a KG, it might just give you an average price, like “50 cents per cup.”
+
+But with CoT, the LLM might think through it like this: “Well, you need to consider the cost of your ingredients, like lemons and sugar, any equipment like pitchers and cups, and how much other stands are charging. You also have to think about how hot it is — more people buy lemonade when it’s warm — and whether your stand has something special, like organic lemons or flavored syrups.”
+
+And with a KG, the LLM could pull in information like the average price of lemons in your area, typical weather patterns, and what’s popular at local stands. This way, you don’t just get a random number — you get a well-thought-out price that fits your specific situation.
+
+Ultimately, I agree that KGs can help with the efficiency of System 2 thinking but aren’t necessary.
+
+Conclusion
+
+Karpathy is right that System 2 is the frontier for LLMs and we are closer than we think. Perhaps all it takes is humans evaluating answers from CoT reasoning tasks?

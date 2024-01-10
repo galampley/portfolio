@@ -1,0 +1,59 @@
+1/8: Computing 101, an Orchestra Metaphor
+
+A BIG part of my AI journey has been learning about software development and deployment. Development is something you can learn in a class but deployment is a different ballgame in terms of novel concepts and complexity. I can become a master at Python but when I want to put an application in the hands of consumers, especially if I want to integrate that app as a feature of a bigger system, deployment complexity explodes and my Python mastery is rendered obsolete. So I wanted to provide a framework for thinking about the world of computing, since this complex subject matter is often overlooked by new developers.
+
+Orchestra Metaphor (starts with the core elements of computing and expands outwards to the broader context in which they operate)
+
+Instruments = Servers
+
+Similar to different instruments in an orchestra, there exist different types of servers (like web servers, file servers, database servers) that offer unique services and functionalities
+An orchestra can scale up by adding more instruments or adapting to different styles of music. Similarly, a network can scale by adding more servers or adapting to different computational tasks and loads
+Musicians = IT Professionals
+
+The diverse skills of musicians compares to the varied specializations of developers, network engineers, and system administrators
+— — — — Different methods for isolation and consistency control — — — —
+
+Music Stand = Container
+
+Include necessary instruments (runtime environment) and are self-contained (ex: Docker)
+Containers encapsulate applications along with all their dependencies, ensuring that they can run reliably and consistently across different computing environments.
+Sound Proof Music Booths = Virtual Machines
+
+Self-contained mini-studio, equipped with its own set of instruments (the complete OS and hardware resources), acoustics (isolated environment), and a copy of the musical score (applications and services)
+Personal Music Folders = Virtual Environments
+
+Custom-selected sheets of music (specific libraries and dependencies) tailored for particular pieces they are practicing or performing
+— — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — — —
+
+Conductor = Kernel / Operating System
+
+Manages and orchestrates the overall operations of the system (ex: Linux)
+Musician Groups = Microservicess
+
+Focused expertise within larger application, that can be built and scaled independently
+Communication Cues = APIs
+
+The essential communication framework that enables different components of the system to interact seamlessly and effectively, between different sections of the orchestra or between the conductor and musicians
+Musical Score = Software and Processes
+
+Provides the instructions and framework for the performance (system operations)
+Data = Music Sheets
+
+Specific information that is processed and interpreted as part of the larger operation. Like individual sheets of music that contain notes for specific parts of a composition, data consists of individual pieces of information processed by the application
+Network Infrastructure = Orchestra Stage
+
+Supports all the below orchestra components and ensures they are connected and can perform together effectively. It includes elements like routers, switches, and cabling that form the backbone of a network
+Security Protocols = Concert Rules & Guidelines
+
+Just as concert halls have ticket checkers and security personnel to control who can enter, access control mechanisms in computing systems determine who can access certain data or systems, preventing unauthorized use
+Regular security checks in a computing system are akin to routine safety inspections in a concert hall, ensuring that everything is in place for a safe performance
+Maintenance & Troubleshooting = Tuning Instruments
+
+Just as musical instruments require regular tuning and maintenance for optimal performance, computing systems need regular updates, patches, and checks
+Cloud Computing = Concert Hall
+
+Larger environment that provides infrastructure, networking capabilities, and scalable resources for the orchestra to perform. A concert hall’s versatility mirrors the flexibility of cloud platforms in accommodating a wide array of applications and workloads. This includes services like AWS, Azure, and Google Cloud Platform, which offer the infrastructure and platform for hosting and running the applications
+Audience = User Experience
+
+The audience’s reaction to the music is akin to user feedback and interaction with software, shaping future performances (software updates and improvements)
+Hopefully this helps organize your thinking when creating and deploying applications. Regardless if they are AI-specific or not.
